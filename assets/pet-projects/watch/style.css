@@ -1,0 +1,99 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body{
+	background: #1F2227;
+	user-select: none;
+	font-family: 'Nunito', sans-serif;
+	max-height: 100vh;
+}
+
+.wrap{
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.dial{
+	display: flex;
+	height: 100px;
+	width: 400px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	background: #2C3138;
+}
+
+.hour, .minutes, .seconds, .milisec, .colon{
+	color: #fff;
+	font-size: 3em;
+	padding: 5px;
+}
+.colon{
+	transform: translateY(-4px);
+}
+
+.control{
+	display: flex;
+	width: 100%;
+	height: 150px;
+	justify-content: center;
+	align-items: center;
+}
+
+.play, .stop{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 45px;
+	margin: 20px;
+	border-radius: 10px;
+	background: #2C3138;
+	border: 2px solid rgba(66, 69, 71, 0);
+	transition: 0.2s ease-out;
+	cursor: pointer;
+}
+.play:hover, .stop:hover{
+	border: 2px solid rgb(66, 69, 71);
+}
+
+.play_ico{
+	position: absolute;
+	display: block;
+	width: 16px;
+	transform: translateX(2px);
+	transition: 0.2s ease-out;
+}
+.pause_ico{
+	position: absolute;
+	display: block;
+	width: 18px;
+	transition: 0.2s ease-out;
+}
+.stop_ico{
+	position: absolute;
+	display: block;
+	width: 25px;
+}
+button:active{
+	transform: scale(0.95);
+}
+
+.off{
+	opacity: 0;
+	visibility: hidden;
+}
+
+@media (max-width: 767px) {
+	.dial{
+		width: fit-content;
+	}
+	.hour{
+		padding-left: 15px;
+	}
+	.milisec{
+		padding-right: 15px;
+	}
+}

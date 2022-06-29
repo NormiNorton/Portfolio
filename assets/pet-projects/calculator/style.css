@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+html{
+    max-height: 100vh;
+}
+
+body{
+    position: relative;
+    background: #CDD4DF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+    font-family: Segoe UI, 'Nunito', sans-serif;
+}
+
+.preloader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #8BC6EC;
+    transition: 0.4s 0.4s ease-in-out;
+}
+.load-prl{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container{
+    display: block;
+    background: #E9EAEE;
+    width: 350px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 0px rgba(130, 130, 130, 0.4);
+    overflow: hidden;
+}
+
+.result{
+    height: 120px;
+    width: 100%;
+    text-align: right;
+    font-weight: 600;
+}
+
+.history{
+    margin: 0 20px;
+    padding: 20px 0px 10px 0px;
+    font-size: 1em;
+    color: rgb(130, 130, 130);
+}
+
+.output{
+    margin: 0 20px;
+    font-size: 2em;
+    color: #000;
+}
+
+.line{
+    display: block;
+    width: 250px;
+    height: 2px;
+    background: rgba(169, 169, 169, 0.5);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.keyboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+
+    margin: 30px auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+#clear{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 147px;
+    height: 64px;
+    border-radius: 50px;
+}
+
+.operator, .number, .empty{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    justify-self: center;
+    font-size: 1.4em;
+    background: #E9EAEE;
+    border: 1px solid rgba(128, 128, 128, 0);
+    transition: border 0.2s ease-out, transform 0.1s ease-in;
+}
+.operator, .number{
+    cursor: pointer;
+}
+
+.number{
+    background: rgba(150, 150, 150, 0.1);
+}
+.number:hover{
+    border: 1px solid gray;
+}
+
+#clear, #backspace, #percent{
+    background: rgba(200, 200, 200, 0.6);
+}
+#clear:hover, #backspace:hover, #percent:hover{
+    border: 1px solid gray;
+}
+
+#divide, #multiply, #minus, #plus{
+    background: rgba(120, 137, 169, 0.5);
+}
+#divide:hover, #multiply:hover, #minus:hover, #plus:hover{
+    border: 1px solid rgba(48, 67, 100, 0.7);
+}
+
+#solution{
+    background: rgba(255, 126, 40, 0.5);
+}
+#solution:hover{
+    border: 1px solid rgba(100, 40, 0, 0.7);
+}
+
+.number:active, .operator:active{
+    transform: scale(0.9);
+}

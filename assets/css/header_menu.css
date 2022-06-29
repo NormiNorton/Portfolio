@@ -1,0 +1,145 @@
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.header_container{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    padding: 0 50px;
+}
+
+.header_logo{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+
+.menu_list{
+    list-style: none;
+}
+
+.menu_icon{
+    display: none;
+}
+
+.menu_link{
+    color: #000;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 0 30px;
+}
+.insert{
+    position: absolute;
+    width: 100%;
+    min-height: 80px;
+    top: 0;
+    left: 0;
+    background-color: #F2F2F2;
+    visibility: hidden;
+    z-index: -1;
+}
+
+
+@media (min-width: 767px) {
+    .menu_list{
+        display: flex;
+        align-items: center;
+    }
+    .menu_list li{
+        position: relative;
+    }
+    .menu_list span{
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        background-color: #000;
+        bottom: 0;
+        left: 50%;
+        transform: translateY(5px);
+        transition: 0.3s ease-in-out;
+    }
+    .menu_list li:hover span{
+        width: 55%;
+        left: 23%;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu_icon{
+        display: block;
+        cursor: pointer;
+        padding: 5px;
+    }
+    .menu_icon span{
+        display: block;
+        width: 55px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 5px;
+        margin: 5px;
+        transition: .4s ease-in-out;
+    }
+    .active_menu_icon span:nth-child(1){
+        width: 40px;
+        transform:
+            translateY(10px)
+            translateX(-15px)
+            rotate(35deg);
+    }
+    .active_menu_icon span:nth-child(2){
+        width: 40px;
+        transform:
+            translateX(15px)
+            translateY(1px) 
+            rotate(-35deg);
+    }
+    .active_menu_icon span:nth-child(3){
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    .menu_body{
+        position: absolute;
+        right: 0;
+        background-color: #000;
+        border-radius: 15px;
+        margin: 15px 50px;
+        text-align: center;
+        transition: 0.6s ease-in-out;
+        transform: translateY(-130px);
+        visibility: hidden;
+        z-index: -2;
+
+    }
+    .insert{
+        visibility: visible;
+    }
+    .menu_link{
+        display: block;
+        color: #fff;
+        padding: 15px;
+        margin: 0;
+        width: 180px;
+        border-radius: 20px;
+    }
+    .menu_link:active{
+        background-color: rgb(29, 29, 29);
+    }
+    .active_menu_body{
+        transform: translateY(0px);
+        visibility: visible;        
+    }    
+}

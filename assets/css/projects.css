@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F2F2F2;
+    user-select: none;
+}
+
+.wrap{
+    position: relative;
+    width: 100%;
+}
+
+.wrap-container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.top-info{
+    width: 100%;
+    margin: 70px 0;
+}
+
+.headline-text{
+    text-align: center;
+    margin: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000000;
+}
+
+.line{
+    max-width: 1300px;
+    height: 6px;
+    border-radius: 10px;
+    background: #000000;
+    margin: 0 50px;
+}
+
+.grid{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    grid-gap: 30px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.item{
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ccc;
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+    border: 2px solid rgba(119, 119, 119, 0);
+    text-decoration: none;
+}
+.card:hover{
+    border: 2px solid #777;
+}
+
+.logo-project{
+    width: 80px;
+    height: 80px;
+}
+
+.title-project{
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    padding: 10px;
+}
