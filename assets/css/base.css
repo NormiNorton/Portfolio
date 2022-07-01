@@ -12,3 +12,17 @@ body{
     overflow: hidden;
     max-height: 100vh;
 }
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: #F2F2F2;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(201, 201, 201);
+    border-radius: 10px;
+    
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(180, 180, 180);
+}
